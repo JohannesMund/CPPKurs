@@ -20,18 +20,14 @@ string input()
 
 int main()
 {
-    int i = 1;
-    unsigned int;
+    bool dieWeltIstSchlecht = true;
 
-    char c = 'c';
-    unsigned char;
 
-    bool b = true;
+    if( dieWeltIstSchlecht )
+    {
+        cout << "ich muss weinen" << endl;
+    }
 
-    float f = 1.1;
-    double d = 2.2;
-
-    int ii = f;
 
 
     string hallo = "Hallo";
