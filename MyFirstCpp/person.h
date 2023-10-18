@@ -7,16 +7,20 @@ class person
 {
 public:
     person();
-    person(std::string name, int alter, std::string berufung);
+    person(const std::string& name, const int alter, const std::string& berufung);
 
-    void setName(std::string s);
-    void setAge(int i);
-    void setBerufung(std::string s);
+    void setName(const std::string& s);
+    void setAge(const int i);
+    void setProfession(const std::string& s);
+
+    std::string getName() const;
+    int getAge() const;
+    std::string getProfession() const;
 
     void output() const;
 
 private:
     std::string _name;
-    int _alter;
-    std::string _berufung;
+    int _age;
+    std::string _profession;
 };
