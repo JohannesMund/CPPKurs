@@ -5,9 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
         cgericht.cpp \
-        main.cpp \
-        person.cpp
+        cperson.cpp \
+        main.cpp
 
 HEADERS += \
     cgericht.h \
-    person.h
+    cperson.h

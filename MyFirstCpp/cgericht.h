@@ -3,10 +3,10 @@
 #include <string>
 #include <vector>
 
-class CGericht
+class CMeal
 {
 public:
-    enum class EZutaten
+    enum class EIngredients
     {
         eWasser,
         eSalz,
@@ -21,12 +21,12 @@ public:
         eKapern
     };
 
-    CGericht(const std::string& name);
+    CMeal(const std::string& name);
 
-    void addZutat(const EZutaten zutat);
+    void addIngredient(const EIngredients zutat);
     void output() const;
 
 private:
     std::string _name;
-    std::vector<EZutaten> _zutaten;
+    std::vector<EIngredients> _ingredients;
 };

@@ -1,14 +1,14 @@
-#include "person.h"
+#include "cperson.h"
 
 #include <iostream>
 #include <string>
 
-person::person() : person("eine nicht näher benannt sein wollende Person", 0, "")
+CPerson::CPerson() : CPerson("eine nicht näher benannt sein wollende Person", 0, "")
 
 {
 }
 
-person::person(const std::string& name, const int alter, const std::string& profession)
+CPerson::CPerson(const std::string& name, const int alter, const std::string& profession)
 {
     setName(name);
     setAge(alter);
@@ -17,37 +17,37 @@ person::person(const std::string& name, const int alter, const std::string& prof
               << std::endl;
 }
 
-void person::setName(const std::string& s)
+void CPerson::setName(const std::string& s)
 {
     _name = s;
 }
 
-void person::setAge(const int i)
+void CPerson::setAge(const int i)
 {
     _age = i;
 }
 
-void person::setProfession(const std::string& s)
+void CPerson::setProfession(const std::string& s)
 {
     _profession = s;
 }
 
-std::string person::getName() const
+std::string CPerson::getName() const
 {
     return _name;
 }
 
-int person::getAge() const
+int CPerson::getAge() const
 {
     return _age;
 }
 
-std::string person::getProfession() const
+std::string CPerson::getProfession() const
 {
     return _profession;
 }
 
-void person::output() const
+void CPerson::output() const
 {
     using namespace std;
     cout << "================================" << endl;

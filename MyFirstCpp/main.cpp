@@ -2,7 +2,7 @@
 #include <string>
 
 #include "cgericht.h"
-#include "person.h"
+#include "cperson.h"
 
 using namespace std;
 
@@ -22,28 +22,28 @@ string input()
 int main()
 {
 
-    CGericht pizza("Pizza");
-    pizza.addZutat(CGericht::EZutaten::eMehl);
-    pizza.addZutat(CGericht::EZutaten::eWasser);
-    pizza.addZutat(CGericht::EZutaten::eSalz);
-    pizza.addZutat(CGericht::EZutaten::eTomaten);
-    pizza.addZutat(CGericht::EZutaten::eSalami);
-    pizza.addZutat(CGericht::EZutaten::eKaese);
+    CMeal pizza("Pizza");
+    pizza.addIngredient(CMeal::EIngredients::eMehl);
+    pizza.addIngredient(CMeal::EIngredients::eWasser);
+    pizza.addIngredient(CMeal::EIngredients::eSalz);
+    pizza.addIngredient(CMeal::EIngredients::eTomaten);
+    pizza.addIngredient(CMeal::EIngredients::eSalami);
+    pizza.addIngredient(CMeal::EIngredients::eKaese);
 
     pizza.output();
 
-    person anne;
+    CPerson anne;
 
     anne.setName("Anne");
     anne.setAge(15);
     anne.setProfession("Schülerin");
 
-    person carlos("Carlos", 25, "Brain");
-    person fabian("Fabian", 28, "Auszubildender");
-    person david("David", 27, "Auszubildender");
-    person hannes("Hannes", 45, "Ausbildungspapa");
+    CPerson carlos("Carlos", 25, "Brain");
+    CPerson fabian("Fabian", 28, "Auszubildender");
+    CPerson david("David", 27, "Auszubildender");
+    CPerson hannes("Hannes", 45, "Ausbildungspapa");
 
-    person azubihorde[4] = {anne, carlos, fabian, david};
+    CPerson azubihorde[4] = {anne, carlos, fabian, david};
 
     for (auto const& p : azubihorde)
     {
