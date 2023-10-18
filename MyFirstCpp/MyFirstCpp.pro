@@ -4,7 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp
+        cgericht.cpp \
+        main.cpp \
+        person.cpp
 
 HEADERS += \
+    cgericht.h \
     person.h
