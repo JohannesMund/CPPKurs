@@ -2,27 +2,27 @@
 
 #include <iostream>
 
-CGericht::CGericht(const std::string& name)
+CMeal::CMeal(const std::string& name)
 {
     _name = name;
 }
 
-void CGericht::addZutat(const EZutaten zutat)
+void CMeal::addIngredient(const EIngredients zutat)
 {
-    _zutaten.push_back(zutat);
+    _ingredients.push_back(zutat);
 }
 
-void CGericht::output() const
+void CMeal::output() const
 {
     using namespace std;
     cout << "================================" << endl;
-    cout << "Futter Fassen!:" << endl;
-    cout << "Das Gericht heißt: " << _name << endl;
-    cout << "und besteht aus: " << endl;
+    cout << "Futter Fassen!" << endl;
+    cout << "Heute gibt es: " << _name << endl;
+    cout << "Das besteht aus: " << endl;
 
-    for (auto z : _zutaten)
+    for (auto z : _ingredients)
     {
-        cout << z << endl;
+        cout << (int)z << endl;
     }
 
     cout << "================================" << endl;
