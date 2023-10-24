@@ -1,14 +1,11 @@
-#include "person.h"
+﻿#include "person.h"
 
 #include <iostream>
 #include <string>
 
-person::person() : person("eine nicht näher benannt sein wollende Person", 0, "")
+person::person() : person("eine nicht näher benannt sein wollende Person", 0, "") {}
 
-{
-}
-
-person::person(const std::string& name, const int alter, const std::string& profession)
+person::person(const std::string &name, const int alter, const std::string &profession)
 {
     setName(name);
     setAge(alter);
@@ -17,35 +14,17 @@ person::person(const std::string& name, const int alter, const std::string& prof
               << std::endl;
 }
 
-void person::setName(const std::string& s)
-{
-    _name = s;
-}
+void person::setName(const std::string &s) { _name = s; }
 
-void person::setAge(const int i)
-{
-    _age = i;
-}
+void person::setAge(const int i) { _age = i; }
 
-void person::setProfession(const std::string& s)
-{
-    _profession = s;
-}
+void person::setProfession(const std::string &s) { _profession = s; }
 
-std::string person::getName() const
-{
-    return _name;
-}
+std::string person::getName() const { return _name; }
 
-int person::getAge() const
-{
-    return _age;
-}
+int person::getAge() const { return _age; }
 
-std::string person::getProfession() const
-{
-    return _profession;
-}
+std::string person::getProfession() const { return _profession; }
 
 void person::output() const
 {

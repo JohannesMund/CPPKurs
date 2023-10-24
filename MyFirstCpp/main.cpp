@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 
 #include "cgericht.h"
@@ -6,10 +6,7 @@
 
 using namespace std;
 
-void output(string s)
-{
-    cout << s << endl << flush;
-}
+void output(string s) { cout << s << endl << flush; }
 
 string input()
 {
@@ -27,7 +24,8 @@ int main()
     pizza.addZutat(CGericht::EZutaten::eWasser);
     pizza.addZutat(CGericht::EZutaten::eSalz);
     pizza.addZutat(CGericht::EZutaten::eTomaten);
-    pizza.addZutat(CGericht::EZutaten::eSalami);
+    pizza.addZutat(CGericht::EZutaten::eSchinken);
+    pizza.addZutat(CGericht::EZutaten::eAnanas);
     pizza.addZutat(CGericht::EZutaten::eKaese);
 
     pizza.output();
@@ -45,7 +43,7 @@ int main()
 
     person azubihorde[4] = {anne, carlos, fabian, david};
 
-    for (auto const& p : azubihorde)
+    for (auto const &p : azubihorde)
     {
         p.output();
     }
