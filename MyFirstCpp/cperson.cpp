@@ -4,7 +4,6 @@
 #include <string>
 
 CPerson::CPerson() : CPerson("eine nicht näher benannt sein wollende Person", 0, "")
-
 {
 }
 

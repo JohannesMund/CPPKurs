@@ -18,8 +18,15 @@ public:
         eSchlampampignons,
         eZwiebeln,
         eKnoblauch,
-        eKapern
+        eKapern,
+        eHackfleisch,
+        eParmesan,
+        ePfeffer,
+        eKarotten,
+        eBasilikum
     };
+
+    static std::string ingredients2String(EIngredients zutat);
 
     CMeal(const std::string& name);
 
