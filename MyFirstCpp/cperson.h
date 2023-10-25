@@ -3,11 +3,11 @@
 #include <iostream>
 #include <string>
 
-class person
+class CPerson
 {
 public:
-    person();
-    person(const std::string& name, const int alter, const std::string& berufung);
+    CPerson();
+    CPerson(const std::string& name, const int alter, const std::string& berufung);
 
     void setName(const std::string& s);
     void setAge(const int i);

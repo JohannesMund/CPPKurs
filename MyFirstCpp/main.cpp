@@ -1,74 +1,80 @@
 #include <iostream>
 #include <string>
 
-#include "cgericht.h"
-#include "person.h"
+#include "cmeal.h"
+#include "cperson.h"
 
 using namespace std;
 
-void output(string s) { cout << s << endl << flush; }
-
-string input() {
-  string s;
-  output("Name eingeben:");
-  cin >> s;
-  return s;
+void output(string s)
+{
+    cout << s << endl << flush;
 }
 
-int main() {
+string input()
+{
+    string s;
+    output("Name eingeben:");
+    cin >> s;
+    return s;
+}
 
-  CGericht pizza("Pizza");
-  pizza.addZutat(CGericht::EZutaten::eMehl);
-  pizza.addZutat(CGericht::EZutaten::eWasser);
-  pizza.addZutat(CGericht::EZutaten::eSalz);
-  pizza.addZutat(CGericht::EZutaten::eTomaten);
-  pizza.addZutat(CGericht::EZutaten::eSalami);
-  pizza.addZutat(CGericht::EZutaten::eKaese);
+int main()
+{
 
-  pizza.output();
+    CMeal pizza("Pizza");
+    pizza.addIngredient(CMeal::EIngredients::eMehl);
+    pizza.addIngredient(CMeal::EIngredients::eWasser);
+    pizza.addIngredient(CMeal::EIngredients::eSalz);
+    pizza.addIngredient(CMeal::EIngredients::eTomaten);
+    pizza.addIngredient(CMeal::EIngredients::eSalami);
+    pizza.addIngredient(CMeal::EIngredients::eKaese);
 
-  CGericht NudelnMitTomatensauce("Nudeln mit Tomatensauce");
-  NudelnMitTomatensauce.addZutat(CGericht::EZutaten::eWasser);
-  NudelnMitTomatensauce.addZutat(CGericht::EZutaten::eNudeln);
-  NudelnMitTomatensauce.addZutat(CGericht::EZutaten::eTomaten);
-  NudelnMitTomatensauce.addZutat(CGericht::EZutaten::eZwiebeln);
-  NudelnMitTomatensauce.addZutat(CGericht::EZutaten::eSalz);
-  NudelnMitTomatensauce.addZutat(CGericht::EZutaten::ePfeffer);
-  NudelnMitTomatensauce.addZutat(CGericht::EZutaten::eKnoblauch);
-  NudelnMitTomatensauce.addZutat(CGericht::EZutaten::eBasilikum);
+    pizza.output();
 
-  NudelnMitTomatensauce.output();
+    CMeal NudelnMitTomatensauce("Nudeln mit Tomatensauce");
+    NudelnMitTomatensauce.addIngredient(CMeal::EIngredients::eWasser);
+    NudelnMitTomatensauce.addIngredient(CMeal::EIngredients::eNudeln);
+    NudelnMitTomatensauce.addIngredient(CMeal::EIngredients::eTomaten);
+    NudelnMitTomatensauce.addIngredient(CMeal::EIngredients::eZwiebeln);
+    NudelnMitTomatensauce.addIngredient(CMeal::EIngredients::eSalz);
+    NudelnMitTomatensauce.addIngredient(CMeal::EIngredients::ePfeffer);
+    NudelnMitTomatensauce.addIngredient(CMeal::EIngredients::eKnoblauch);
+    NudelnMitTomatensauce.addIngredient(CMeal::EIngredients::eBasilikum);
 
-  CGericht NudelnBolognese("Nudeln mit Bolognesesauce");
-  NudelnBolognese.addZutat(CGericht::EZutaten::eNudeln);
-  NudelnBolognese.addZutat(CGericht::EZutaten::eWasser);
-  NudelnBolognese.addZutat(CGericht::EZutaten::eHackfleisch);
-  NudelnBolognese.addZutat(CGericht::EZutaten::eSalz);
-  NudelnBolognese.addZutat(CGericht::EZutaten::ePfeffer);
-  NudelnBolognese.addZutat(CGericht::EZutaten::eZwiebeln);
-  NudelnBolognese.addZutat(CGericht::EZutaten::eKarotten);
-  NudelnBolognese.addZutat(CGericht::EZutaten::eTomaten);
-  NudelnBolognese.addZutat(CGericht::EZutaten::eKnoblauch);
-  NudelnBolognese.addZutat(CGericht::EZutaten::eParmesan);
+    NudelnMitTomatensauce.output();
 
-  NudelnBolognese.output();
+    CMeal NudelnBolognese("Nudeln mit Bolognesesauce");
+    NudelnBolognese.addIngredient(CMeal::EIngredients::eNudeln);
+    NudelnBolognese.addIngredient(CMeal::EIngredients::eWasser);
+    NudelnBolognese.addIngredient(CMeal::EIngredients::eHackfleisch);
+    NudelnBolognese.addIngredient(CMeal::EIngredients::eSalz);
+    NudelnBolognese.addIngredient(CMeal::EIngredients::ePfeffer);
+    NudelnBolognese.addIngredient(CMeal::EIngredients::eZwiebeln);
+    NudelnBolognese.addIngredient(CMeal::EIngredients::eKarotten);
+    NudelnBolognese.addIngredient(CMeal::EIngredients::eTomaten);
+    NudelnBolognese.addIngredient(CMeal::EIngredients::eKnoblauch);
+    NudelnBolognese.addIngredient(CMeal::EIngredients::eParmesan);
 
-  person anne;
+    NudelnBolognese.output();
 
-  anne.setName("Anne");
-  anne.setAge(16);
-  anne.setProfession("Schülerin");
+    CPerson anne;
 
-  person carlos("Carlos", 25, "Brain");
-  person fabian("Fabian", 28, "Auszubildender");
-  person david("David", 27, "Auszubildender");
-  person hannes("Hannes", 45, "Ausbildungspapa");
+    anne.setName("Anne");
+    anne.setAge(16);
+    anne.setProfession("Schülerin");
 
-  person azubihorde[4] = {anne, carlos, fabian, david};
+    CPerson carlos("Carlos", 25, "Brain");
+    CPerson fabian("Fabian", 28, "Auszubildender");
+    CPerson david("David", 27, "Auszubildender");
+    CPerson hannes("Hannes", 45, "Ausbildungspapa");
 
-  for (auto const &p : azubihorde) {
-    p.output();
-  }
+    CPerson azubihorde[4] = {anne, carlos, fabian, david};
 
-  return 0;
+    for (auto const& p : azubihorde)
+    {
+        p.output();
+    }
+
+    return 0;
 }
