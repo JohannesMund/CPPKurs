@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "cgericht.h"
+#include "cmeal.h"
 #include "cperson.h"
 
 using namespace std;
@@ -23,12 +23,12 @@ int main()
 {
 
     CMeal pizza("Pizza");
-    pizza.addIngredient(CMeal::EIngredients::eMehl);
-    pizza.addIngredient(CMeal::EIngredients::eWasser);
-    pizza.addIngredient(CMeal::EIngredients::eSalz);
-    pizza.addIngredient(CMeal::EIngredients::eTomaten);
-    pizza.addIngredient(CMeal::EIngredients::eSalami);
-    pizza.addIngredient(CMeal::EIngredients::eKaese);
+    pizza.addIngredient(Ingredients::EIngredients::eMehl);
+    pizza.addIngredient(Ingredients::EIngredients::eWasser);
+    pizza.addIngredient(Ingredients::EIngredients::eSalz);
+    pizza.addIngredient(Ingredients::EIngredients::eTomaten);
+    pizza.addIngredient(Ingredients::EIngredients::eSalami);
+    pizza.addIngredient(Ingredients::EIngredients::eKaese);
 
     pizza.output();
 

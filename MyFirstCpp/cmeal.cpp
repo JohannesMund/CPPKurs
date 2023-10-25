@@ -1,4 +1,4 @@
-#include "cgericht.h"
+#include "cmeal.h"
 
 #include <iostream>
 
@@ -7,9 +7,9 @@ CMeal::CMeal(const std::string& name)
     _name = name;
 }
 
-void CMeal::addIngredient(const EIngredients zutat)
+void CMeal::addIngredient(const Ingredients::EIngredients ingredient)
 {
-    _ingredients.push_back(zutat);
+    _ingredients.push_back(ingredient);
 }
 
 void CMeal::output() const
@@ -22,8 +22,12 @@ void CMeal::output() const
 
     for (auto z : _ingredients)
     {
-        cout << (int)z << endl;
+        cout << " * " << ingredient2String(z) << endl;
     }
-
     cout << "================================" << endl;
+}
+
+std::string CMeal::ingredient2String(const Ingredients::EIngredients ingredient)
+{
+    return Ingredients::toString(ingredient);
 }
