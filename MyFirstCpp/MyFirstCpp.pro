@@ -6,8 +6,10 @@ CONFIG -= qt
 SOURCES += \
         cmeal.cpp \
         cperson.cpp \
+        ingredients.cpp \
         main.cpp
 
 HEADERS += \
     cmeal.h \
-    cperson.h
+    cperson.h \
+    ingredients.h

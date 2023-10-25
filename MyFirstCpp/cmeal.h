@@ -3,37 +3,17 @@
 #include <string>
 #include <vector>
 
+#include "ingredients.h"
+
 class CMeal
 {
 public:
-    enum class EIngredients
-    {
-        eWasser,
-        eSalz,
-        eMehl,
-        eKaese,
-        eNudeln,
-        eTomaten,
-        eSalami,
-        eSchlampampignons,
-        eZwiebeln,
-        eKnoblauch,
-        eKapern,
-        eHackfleisch,
-        eParmesan,
-        ePfeffer,
-        eKarotten,
-        eBasilikum
-    };
-
-    static std::string ingredients2String(EIngredients zutat);
-
     CMeal(const std::string& name);
 
-    void addIngredient(const EIngredients zutat);
+    void addIngredient(const Ingredients::EIngredients zutat);
     void output() const;
 
 private:
     std::string _name;
-    std::vector<EIngredients> _ingredients;
+    std::vector<Ingredients::EIngredients> _ingredients;
 };

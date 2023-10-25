@@ -3,14 +3,14 @@
 #include <iostream>
 #include <string>
 
-CPerson::CPerson() : CPerson("eine nicht näher benannt sein wollende Person", 0, "")
+CPerson::CPerson() : CPerson("eine nicht naeher benannt sein wollende Person", 0, "")
 {
 }
 
-CPerson::CPerson(const std::string& name, const int alter, const std::string& profession)
+CPerson::CPerson(const std::string& name, const int age, const std::string& profession)
 {
     setName(name);
-    setAge(alter);
+    setAge(age);
     setProfession(profession);
     std::cout << "Es macht *Ploppp* und " << _name << " erscheint aus dem Nichts, steht da, und guckt sparsam."
               << std::endl;
