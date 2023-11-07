@@ -18,13 +18,13 @@ string input() {
 
 int main() {
 
-  CMeal pizza("Pizza");
-  pizza.addIngredient(Ingredients::EIngredients::eMehl);
-  pizza.addIngredient(Ingredients::EIngredients::eWasser);
-  pizza.addIngredient(Ingredients::EIngredients::eSalz);
-  pizza.addIngredient(Ingredients::EIngredients::eTomaten);
-  pizza.addIngredient(Ingredients::EIngredients::eSalami);
-  pizza.addIngredient(Ingredients::EIngredients::eKaese);
+  CMeal Pizza("Pizza");
+  Pizza.addIngredient(Ingredients::EIngredients::eMehl);
+  Pizza.addIngredient(Ingredients::EIngredients::eWasser);
+  Pizza.addIngredient(Ingredients::EIngredients::eSalz);
+  Pizza.addIngredient(Ingredients::EIngredients::eTomaten);
+  Pizza.addIngredient(Ingredients::EIngredients::eSalami);
+  Pizza.addIngredient(Ingredients::EIngredients::eKaese);
 
   pizza.output();
 
@@ -54,40 +54,40 @@ int main() {
 
   NudelnBolognese.output();
 
-  CMeal pizzaAnanas("Pizza Ananas");
-  pizzaAnanas.addIngredient(Ingredients::EIngredients::eMehl);
-  pizzaAnanas.addIngredient(Ingredients::EIngredients::eWasser);
-  pizzaAnanas.addIngredient(Ingredients::EIngredients::eSalz);
-  pizzaAnanas.addIngredient(Ingredients::EIngredients::eTomaten);
-  pizzaAnanas.addIngredient(Ingredients::EIngredients::eAnanas);
-  pizzaAnanas.addIngredient(Ingredients::EIngredients::eKaese);
+  CMeal PizzaAnanas("Pizza Ananas");
+  PizzaAnanas.addIngredient(Ingredients::EIngredients::eMehl);
+  PizzaAnanas.addIngredient(Ingredients::EIngredients::eWasser);
+  PizzaAnanas.addIngredient(Ingredients::EIngredients::eSalz);
+  PizzaAnanas.addIngredient(Ingredients::EIngredients::eTomaten);
+  PizzaAnanas.addIngredient(Ingredients::EIngredients::eAnanas);
+  PizzaAnanas.addIngredient(Ingredients::EIngredients::eKaese);
 
   pizzaAnanas.output();
 
-  CMeal wrapmitlasagne("Wrap mit Lasagne");
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eHackfleisch);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eSalz);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::ePfeffer);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eZwiebeln);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eKarotten);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eTomaten);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eKnoblauch);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eParmesan);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eLasagneplatten);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eMilch);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eButter);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eMehl);
-  wrapmitlasagne.addIngredient(Ingredients::EIngredients::eWraps);
+  CMeal WrapMitLasagne("Wrap mit Lasagne");
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eHackfleisch);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eSalz);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::ePfeffer);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eZwiebeln);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eKarotten);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eTomaten);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eKnoblauch);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eParmesan);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eLasagneplatten);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eMilch);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eButter);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eMehl);
+  WrapMitLasagne.addIngredient(Ingredients::EIngredients::eWraps);
 
-  wrapmitlasagne.output();
+  WrapMitLasagne.output();
 
-  CMeal toteOma("tote Oma");
-  toteOma.addIngredient(Ingredients::EIngredients::eBlutwurst);
-  toteOma.addIngredient(Ingredients::EIngredients::eSauerkraut);
-  toteOma.addIngredient(Ingredients::EIngredients::eKartoffeln);
-  toteOma.addIngredient(Ingredients::EIngredients::eErbsen);
+  CMeal ToteOma("tote Oma");
+  ToteOma.addIngredient(Ingredients::EIngredients::eBlutwurst);
+  ToteOma.addIngredient(Ingredients::EIngredients::eSauerkraut);
+  ToteOma.addIngredient(Ingredients::EIngredients::eKartoffeln);
+  ToteOma.addIngredient(Ingredients::EIngredients::eErbsen);
 
-  toteOma.output();
+  ToteOma.output();
 
   CPerson anne;
 
