@@ -25,3 +25,8 @@ void CMeal::output() const
     }
     cout << "================================" << endl;
 }
+
+std::string CMeal::getName() const
+{
+    return _name;
+}
