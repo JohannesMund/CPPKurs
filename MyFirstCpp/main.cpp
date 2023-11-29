@@ -4,71 +4,37 @@
 #include "cmeal.h"
 #include "cperson.h"
 #include "ingredients.h"
-
-using namespace std;
-
-void output(string s)
-{
-    cout << s << endl << flush;
-}
-
-string input()
-{
-    string s;
-    output("Name eingeben:");
-    cin >> s;
-    return s;
-}
-
+#include "mealfactory.h"
 int main()
 {
+    auto pizza = MealFactory::makePizza();
+    pizza->output();
 
-    CMeal pizza("Pizza");
-    pizza.addIngredient(Ingredients::EIngredients::eMehl);
-    pizza.addIngredient(Ingredients::EIngredients::eWasser);
-    pizza.addIngredient(Ingredients::EIngredients::eSalz);
-    pizza.addIngredient(Ingredients::EIngredients::eTomaten);
-    pizza.addIngredient(Ingredients::EIngredients::eSalami);
-    pizza.addIngredient(Ingredients::EIngredients::eKaese);
+    auto nudelnMitTomatenSauce = MealFactory::makeNudelnMitTomatensauce();
+    nudelnMitTomatenSauce->output();
 
-    pizza.output();
+    auto NudelnMitBolo = MealFactory::makeNudelnMitBolognese();
+    NudelnMitBolo->output();
 
-    CMeal NudelnMitTomatensauce("Nudeln mit Tomatensauce");
-    NudelnMitTomatensauce.addIngredient(Ingredients::EIngredients::eWasser);
-    NudelnMitTomatensauce.addIngredient(Ingredients::EIngredients::eNudeln);
-    NudelnMitTomatensauce.addIngredient(Ingredients::EIngredients::eTomaten);
-    NudelnMitTomatensauce.addIngredient(Ingredients::EIngredients::eZwiebeln);
-    NudelnMitTomatensauce.addIngredient(Ingredients::EIngredients::eSalz);
-    NudelnMitTomatensauce.addIngredient(Ingredients::EIngredients::ePfeffer);
-    NudelnMitTomatensauce.addIngredient(Ingredients::EIngredients::eKnoblauch);
-    NudelnMitTomatensauce.addIngredient(Ingredients::EIngredients::eBasilikum);
+    auto PizzaAnanas = MealFactory::makePizzaAnanas();
+    PizzaAnanas->output();
 
-    NudelnMitTomatensauce.output();
+    auto WrapMitLasagne = MealFactory::makeWrapMitLasagne();
+    WrapMitLasagne->output();
 
-    CMeal NudelnBolognese("Nudeln mit Bolognesesauce");
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::eNudeln);
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::eWasser);
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::eHackfleisch);
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::eSalz);
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::ePfeffer);
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::eZwiebeln);
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::eKarotten);
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::eTomaten);
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::eKnoblauch);
-    NudelnBolognese.addIngredient(Ingredients::EIngredients::eParmesan);
-
-    NudelnBolognese.output();
+    auto ToteOma = MealFactory::makeToteOma();
+    ToteOma->output();
 
     CPerson anne;
-
     anne.setName("Anne");
     anne.setAge(16);
     anne.setProfession("Schuelerin");
+    anne.setfavouriteMeal(&PizzaAnanas);
 
-    CPerson carlos("Carlos", 25, "Brain");
-    CPerson fabian("Fabian", 28, "Auszubildender");
-    CPerson david("David", 27, "Auszubildender");
-    CPerson hannes("Hannes", 45, "Ausbildungspapa");
+    CPerson carlos("Carlos", 25, "Brain", WrapMitLasagne);
+    CPerson fabian("Fabian", 28, "Auszubildender", pizza);
+    CPerson david("David", 27, "Auszubildender", nudelnMitTomatenSauce);
+    CPerson hannes("Hannes", 45, "Ausbildungspapa", ToteOma);
 
     CPerson azubihorde[4] = {anne, carlos, fabian, david};
 
@@ -76,6 +42,14 @@ int main()
     {
         p.output();
     }
+    hannes.output();
+
+    delete pizza;
+    delete nudelnMitTomatenSauce;
+    delete NudelnMitBolo;
+    delete WrapMitLasagne;
+    delete PizzaAnanas;
+    delete ToteOma;
 
     return 0;
 }
