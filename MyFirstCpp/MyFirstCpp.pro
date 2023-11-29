@@ -7,9 +7,11 @@ SOURCES += \
         cmeal.cpp \
         cperson.cpp \
         ingredients.cpp \
-        main.cpp
+        main.cpp \
+        mealfactory.cpp
 
 HEADERS += \
     cmeal.h \
     cperson.h \
-    ingredients.h
+    ingredients.h \
+    mealfactory.h
