@@ -3,87 +3,83 @@
 
 CMeal* MealFactory::makePizza()
 {
-    CMeal* Pizza = new CMeal("Pizza");
-    Pizza->addIngredient(Ingredients::EIngredients::eMehl);
-    Pizza->addIngredient(Ingredients::EIngredients::eWasser);
-    Pizza->addIngredient(Ingredients::EIngredients::eSalz);
-    Pizza->addIngredient(Ingredients::EIngredients::eTomaten);
-    Pizza->addIngredient(Ingredients::EIngredients::eSalami);
-    Pizza->addIngredient(Ingredients::EIngredients::eKaese);
-
-    return Pizza;
+    CMeal* pizza = new CMeal("Pizza");
+    pizza->addIngredient(Ingredients::EIngredients::eMehl);
+    pizza->addIngredient(Ingredients::EIngredients::eWasser);
+    pizza->addIngredient(Ingredients::EIngredients::eSalz);
+    pizza->addIngredient(Ingredients::EIngredients::eTomaten);
+    pizza->addIngredient(Ingredients::EIngredients::eSalami);
+    pizza->addIngredient(Ingredients::EIngredients::eKaese);
+    return pizza;
 }
 
 CMeal* MealFactory::makeNudelnMitTomatensauce()
 {
-    CMeal* NudelnMitTomatensauce = new CMeal("Nudeln mit Tomatensauce");
-    NudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eWasser);
-    NudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eNudeln);
-    NudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eTomaten);
-    NudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eZwiebeln);
-    NudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eSalz);
-    NudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::ePfeffer);
-    NudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eKnoblauch);
-    NudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eBasilikum);
-
-    return NudelnMitTomatensauce;
+    CMeal* nudelnMitTomatensauce = new CMeal("Nudeln mit Tomatensauce");
+    nudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eWasser);
+    nudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eNudeln);
+    nudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eTomaten);
+    nudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eZwiebeln);
+    nudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eSalz);
+    nudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::ePfeffer);
+    nudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eKnoblauch);
+    nudelnMitTomatensauce->addIngredient(Ingredients::EIngredients::eBasilikum);
+    return nudelnMitTomatensauce;
 }
 
-CMeal* MealFactory::makeNudelnMitBolo()
+CMeal* MealFactory::makeNudelnMitBolognese()
 {
-    CMeal* NudelnMitBolo = new CMeal("Nudeln mit Bolognesesauce");
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::eNudeln);
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::eWasser);
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::eHackfleisch);
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::eSalz);
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::ePfeffer);
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::eZwiebeln);
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::eKarotten);
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::eTomaten);
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::eKnoblauch);
-    NudelnMitBolo->addIngredient(Ingredients::EIngredients::eParmesan);
-
-    return NudelnMitBolo;
+    CMeal* nudelnMitBolognese = new CMeal("Nudeln mit Bolognesesauce");
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::eNudeln);
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::eWasser);
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::eHackfleisch);
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::eSalz);
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::ePfeffer);
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::eZwiebeln);
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::eKarotten);
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::eTomaten);
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::eKnoblauch);
+    nudelnMitBolognese->addIngredient(Ingredients::EIngredients::eParmesan);
+    return nudelnMitBolognese;
 }
 
-CMeal* MealFactory::makeWrapMitLasnag()
+CMeal* MealFactory::makeWrapMitLasagne()
 {
-    CMeal* WrapMitLasagne = new CMeal("Wrap mit Lasagne");
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eHackfleisch);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eSalz);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::ePfeffer);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eZwiebeln);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eKarotten);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eTomaten);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eKnoblauch);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eParmesan);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eLasagneplatten);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eMilch);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eButter);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eMehl);
-    WrapMitLasagne->addIngredient(Ingredients::EIngredients::eWraps);
-
-    return WrapMitLasagne;
+    CMeal* wrapMitLasagne = new CMeal("Wrap mit Lasagne");
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eHackfleisch);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eSalz);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::ePfeffer);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eZwiebeln);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eKarotten);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eTomaten);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eKnoblauch);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eParmesan);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eLasagneplatten);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eMilch);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eButter);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eMehl);
+    wrapMitLasagne->addIngredient(Ingredients::EIngredients::eWraps);
+    return wrapMitLasagne;
 }
 
 CMeal* MealFactory::makePizzaAnanas()
 {
 
-    CMeal* PizzaAnanas = new CMeal("Pizza Ananas");
-    PizzaAnanas->addIngredient(Ingredients::EIngredients::eMehl);
-    PizzaAnanas->addIngredient(Ingredients::EIngredients::eWasser);
-    PizzaAnanas->addIngredient(Ingredients::EIngredients::eSalz);
-    PizzaAnanas->addIngredient(Ingredients::EIngredients::eTomaten);
-    PizzaAnanas->addIngredient(Ingredients::EIngredients::eAnanas);
-    PizzaAnanas->addIngredient(Ingredients::EIngredients::eKaese);
-    return PizzaAnanas;
+    CMeal* pizzaAnanas = new CMeal("Pizza Ananas");
+    pizzaAnanas->addIngredient(Ingredients::EIngredients::eMehl);
+    pizzaAnanas->addIngredient(Ingredients::EIngredients::eWasser);
+    pizzaAnanas->addIngredient(Ingredients::EIngredients::eSalz);
+    pizzaAnanas->addIngredient(Ingredients::EIngredients::eTomaten);
+    pizzaAnanas->addIngredient(Ingredients::EIngredients::eAnanas);
+    pizzaAnanas->addIngredient(Ingredients::EIngredients::eKaese);
+    return pizzaAnanas;
 }
 
 CMeal* MealFactory::makeToteOma()
 {
-    CMeal* ToteOma = new CMeal("tote Oma");
-    ToteOma->addIngredient(Ingredients::EIngredients::eBlutwurst);
-    ToteOma->addIngredient(Ingredients::EIngredients::eSauerkraut);
-    ToteOma->addIngredient(Ingredients::EIngredients::eKartoffeln);
-    ToteOma->addIngredient(Ingredients::EIngredients::eErbsen);
+    CMeal* toteOma = new CMeal("tote Oma");
+    toteOma->addIngredient(Ingredients::EIngredients::eBlutwurst);
+    toteOma->addIngredient(Ingredients::EIngredients::eSauerkraut);
+    toteOma->addIngredient(Ingredients::EIngredients::eKartoffeln);
+    toteOma->addIngredient(Ingredients::EIngredients::eErbsen);
 }
