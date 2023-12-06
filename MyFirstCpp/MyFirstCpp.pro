@@ -6,6 +6,7 @@ CONFIG -= qt
 SOURCES += \
         cmeal.cpp \
         cperson.cpp \
+        cpizza.cpp \
         ingredients.cpp \
         main.cpp \
         mealfactory.cpp
@@ -13,5 +14,6 @@ SOURCES += \
 HEADERS += \
     cmeal.h \
     cperson.h \
+    cpizza.h \
     ingredients.h \
     mealfactory.h

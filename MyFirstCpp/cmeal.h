@@ -8,13 +8,16 @@
 class CMeal
 {
 public:
+    CMeal();
     CMeal(const std::string& name);
 
-    void addIngredient(const Ingredients::EIngredients zutat);
+    virtual void addIngredient(const Ingredients::EIngredients zutat);
     void output() const;
-    std::string getName() const;
+    virtual std::string getName() const;
+
+protected:
+    std::vector<Ingredients::EIngredients> _ingredients;
 
 private:
     std::string _name;
-    std::vector<Ingredients::EIngredients> _ingredients;
 };
