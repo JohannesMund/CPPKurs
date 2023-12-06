@@ -82,4 +82,5 @@ CMeal* MealFactory::makeToteOma()
     toteOma->addIngredient(Ingredients::EIngredients::eSauerkraut);
     toteOma->addIngredient(Ingredients::EIngredients::eKartoffeln);
     toteOma->addIngredient(Ingredients::EIngredients::eErbsen);
+    return toteOma;
 }
