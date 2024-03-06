@@ -5,6 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
         cmeal.cpp \
+        cnachwuchskraft.cpp \
         cperson.cpp \
         cpizza.cpp \
         ingredients.cpp \
@@ -13,6 +14,7 @@ SOURCES += \
 
 HEADERS += \
     cmeal.h \
+    cnachwuchskraft.h \
     cperson.h \
     cpizza.h \
     ingredients.h \

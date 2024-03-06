@@ -1,13 +1,23 @@
+#include <functional>
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 #include "cmeal.h"
+#include "cnachwuchskraft.h"
 #include "cperson.h"
 #include "cpizza.h"
 #include "ingredients.h"
 #include "mealfactory.h"
+
+bool smallerThan100(const int i)
+{
+    return i < 100;
+}
+
 int main()
 {
+
     auto nudelnMitTomatenSauce = MealFactory::makeNudelnMitTomatensauce();
     nudelnMitTomatenSauce->output();
 
@@ -28,24 +38,37 @@ int main()
     pizza.addIngredient(Ingredients::EIngredients::eSchlampampignons);
     pizza.output();
 
-    CPerson anne;
+    CNachwuchskraft anne;
     anne.setName("Anne");
     anne.setAge(16);
     anne.setProfession("Schuelerin");
     anne.setfavouriteMeal(PizzaAnanas);
 
-    CPerson carlos("Carlos", 25, "Brain", WrapMitLasagne);
-    CPerson fabian("Fabian", 28, "Auszubildender", &pizza);
-    CPerson david("David", 27, "Auszubildender", nudelnMitTomatenSauce);
+    CNachwuchskraft carlos("Carlos", 25, "Brain", WrapMitLasagne);
+    CNachwuchskraft fabian("Fabian", 28, "Auszubildender", &pizza);
+    CNachwuchskraft david("David", 27, "Auszubildender", nudelnMitTomatenSauce);
     CPerson hannes("Hannes", 45, "Ausbildungspapa", ToteOma);
 
-    CPerson azubihorde[4] = {anne, carlos, fabian, david};
+    std::vector<int> vecInt{1, 100, 123, 99, 105, 50, 37, 89, 47};
 
-    for (auto const& p : azubihorde)
+    std::vector<CNachwuchskraft> azubis{carlos, fabian, david, anne};
+
+    std::vector<CNachwuchskraft> minderjaerhige;
+    std::vector<CNachwuchskraft> mitarbeitendeMitZweifelhaftenEssgewohnheiten;
+
+    std::copy_if(azubis.begin(), azubis.end(), std::back_inserter(minderjaerhige), CPerson::isMinor());
+
+
+    if(minderjaerhige.size())
     {
-        p.output();
+        minderjaerhige.at(0).output();
     }
-    hannes.output();
+    else
+    {
+        std::cout << "Keiner gefunden" << std::endl;
+    }
+
+
 
     delete nudelnMitTomatenSauce;
     delete NudelnMitBolo;
